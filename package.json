@@ -11,14 +11,19 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:hiera-eyaml.encrypt",
+        "onCommand:hiera-eyaml.decrypt"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "hiera-eyaml.encrypt",
+                "title": "Encrypt YAML"
+            },
+            {
+                "command": "hiera-eyaml.decrypt",
+                "title": "Decrypt YAML"
             }
         ]
     },
