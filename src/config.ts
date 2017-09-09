@@ -22,7 +22,7 @@ abstract class ConfigImpl implements Config {
     }
 }
 
-enum OutputFormat {
+export enum OutputFormat {
     Block,
     String
 }
@@ -40,7 +40,7 @@ export class EncryptConfigImpl extends ConfigImpl implements EncryptConfig {
 
     loadAndValidate(): void {
         super.loadAndValidate();
-        this.outputFormat = this.rawConfig.outputFormat;
+        this.outputFormat = OutputFormat[<string>this.rawConfig.outputFormat];
         // TODO: default to block if not specified
         this.outputBlockSize = this.rawConfig.outputBlockSize;
         // TODO: default to 74 if no value is specified
