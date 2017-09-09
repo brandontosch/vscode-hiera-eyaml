@@ -30,7 +30,8 @@ function doCrypt(cryptKind: crypt.commands.CryptKind) {
 
         cryptCommand.execute(text).then((result) => {
             editor.edit((builder) => {
-                builder.replace(selection, result);
+                const preparedOutput = cryptCommand.prepareOutput(result);
+                builder.replace(selection, preparedOutput);
             });
         }).catch((error) => {
             output.appendLine(`hiera-eyaml.${cryptKind}: Failed: `);
