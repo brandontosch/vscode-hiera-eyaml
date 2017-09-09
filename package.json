@@ -2,7 +2,7 @@
     "name": "vscode-hiera-eyaml",
     "displayName": "vscode-hiera-eyaml",
     "description": "Adds support for hiera-eyaml commands.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "BrandonTosch",
     "engines": {
         "vscode": "^1.15.0"
@@ -11,18 +11,18 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:hiera-eyaml.encrypt",
-        "onCommand:hiera-eyaml.decrypt"
+        "onCommand:hiera-eyaml.Encrypt",
+        "onCommand:hiera-eyaml.Decrypt"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "hiera-eyaml.encrypt",
+                "command": "hiera-eyaml.Encrypt",
                 "title": "Encrypt YAML"
             },
             {
-                "command": "hiera-eyaml.decrypt",
+                "command": "hiera-eyaml.Decrypt",
                 "title": "Decrypt YAML"
             }
         ]
