@@ -63,19 +63,7 @@ export namespace commands {
         }
 
         protected prepareInput(input: string): string {
-            return this.removeAll(input, ['\r', '\n']);
-        }
-
-        removeAll(source: string, removes: string[]): string {
-            var result = source;
-
-            removes.forEach((remove) => {
-                while (result.indexOf(remove) != -1) {
-                    result = result.replace(remove, "");
-                }
-            });
-
-            return result;
+            return input.replace(/\r?\n|\r|[ ]/g, "");
         }
     }
 
