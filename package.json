@@ -55,7 +55,7 @@
                         "outputBlockSize": {
                             "type": "number",
                             "default": 74,
-                            "description": "Specified the length of each line when using Block output format."
+                            "description": "Specifies the length of each line when using Block output format."
                         }       
                     }
                 }
