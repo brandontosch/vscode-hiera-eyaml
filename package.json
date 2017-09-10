@@ -35,7 +35,7 @@
                         "eyamlPath": {
                             "type": "string",
                             "default": "eyaml",
-                            "description": "Path to the eyaml executable."
+                            "description": "Path to the eyaml command line utility."
                         },
                         "publicKeyPath": {
                             "type": "string",
