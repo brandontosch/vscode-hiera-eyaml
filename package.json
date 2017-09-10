@@ -18,11 +18,11 @@
         "commands": [
             {
                 "command": "hiera-eyaml.Encrypt",
-                "title": "hiera-eyaml.Encrypt"
+                "title": "Encrypt selection with eyaml"
             },
             {
                 "command": "hiera-eyaml.Decrypt",
-                "title": "hiera-eyaml.Decrypt"
+                "title": "Decrypt selection with eyaml"
             }
         ],
         "configuration": {
@@ -60,6 +60,17 @@
                     }
                 }
             }
+        },
+        "menus": {
+            "editor/context": [{
+                "when": "resourceLangId == yaml",
+                "command": "hiera-eyaml.Encrypt",
+                "group": "1_modification@10001"
+            },{
+                "when": "resourceLangId == yaml",
+                "command": "hiera-eyaml.Decrypt",
+                "group": "1_modification@10002"
+            }]
         }
     },
     "scripts": {
