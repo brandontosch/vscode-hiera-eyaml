@@ -11,8 +11,7 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:hiera-eyaml.Encrypt",
-        "onCommand:hiera-eyaml.Decrypt"
+        "onLanguage:yaml"
     ],
     "main": "./out/src/extension",
     "contributes": {
