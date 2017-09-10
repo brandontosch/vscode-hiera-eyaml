@@ -1,65 +1,26 @@
-# vscode-hiera-eyaml README
-
-This is the README for your extension "vscode-hiera-eyaml". After writing up a brief description, we recommend including the following sections.
-
+# hiera-eyaml
+This extension adds support for running encrypt/decrypt commands within yaml files using hiera-eyaml. The hiera-eyaml gem is required to be installed.
 ## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
+### Encryption
+- Allows for encrypting the currently selected data using the public key specified in your settings.
+- Accessible via command palette or editor context menu as: *Encrypt selection with eyaml*
+- Output format can be specified via settings as Block or String format. If using Block format, you may also set the line length to use when creating the block.
+- Only a public key needs to be specified in the settings for encryption to work.
+### Decryption
+- Allows for decrypting the currently selected data using the public and private keys specified in your settings.
+- Accessible via command palette or editor context menu as: *Decrypt selection with eyaml*
+- Both a public and private key must be specified in the settings for decryption to work.
 ## Requirements
+Ruby and the hiera-eyaml gem are required to be installed. The hiera-eyaml gem can be installed using this command: `gem install hiera-eyaml`
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
+This extension has been tested with version 2.1.0 (https://rubygems.org/gems/hiera-eyaml/versions/2.1.0).
 ## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
+This extension contributes the following settings under `hiera-eyaml`:
+* `eyamlPath`: Path to the eyaml command line utility.
+* `publicKeyPath`: Path to the public key to use for encryption and decryption.
+* `privateKeyPath`: Path to private key to use for decryption.
+* `outputFormat`: Formatting to use for encrypted value (String or Block).
+* `outputBlockSize`: Specifies the length of each line when using Block output format.
 ## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+### Version 1.0.0
+* Initial release
