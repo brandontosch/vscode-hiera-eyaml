@@ -2,7 +2,7 @@
     "name": "hiera-eyaml",
     "displayName": "hiera-eyaml",
     "description": "Encrypt/decrypt using hiera-eyaml.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "brandontosch",
     "engines": {
         "vscode": "^1.15.0"

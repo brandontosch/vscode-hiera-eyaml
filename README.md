@@ -33,6 +33,10 @@ This extension contributes the following settings under `hiera-eyaml`:
 
 ## Release Notes
 
+### Version 1.0.1
+
+* Decryption: fixed handling of spaces in block formatted encrypted data
+
 ### Version 1.0.0
 
 * Initial release
