@@ -18,11 +18,11 @@
         "commands": [
             {
                 "command": "hiera-eyaml.Encrypt",
-                "title": "Encrypt YAML"
+                "title": "hiera-eyaml.Encrypt"
             },
             {
                 "command": "hiera-eyaml.Decrypt",
-                "title": "Decrypt YAML"
+                "title": "hiera-eyaml.Decrypt"
             }
         ],
         "configuration": {
