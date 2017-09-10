@@ -3,7 +3,7 @@
     "displayName": "vscode-hiera-eyaml",
     "description": "Adds support for hiera-eyaml commands.",
     "version": "1.0.0",
-    "publisher": "BrandonTosch",
+    "publisher": "brandontosch",
     "engines": {
         "vscode": "^1.15.0"
     },
