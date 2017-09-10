@@ -25,7 +25,43 @@
                 "command": "hiera-eyaml.Decrypt",
                 "title": "Decrypt YAML"
             }
-        ]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "hiera-eyaml configuration",
+            "properties": {
+                "hiera-eyaml" :{
+                    "type": "object",
+                    "properties": {
+                        "eyamlPath": {
+                            "type": "string",
+                            "default": "eyaml",
+                            "description": "Path to the eyaml executable."
+                        },
+                        "publicKeyPath": {
+                            "type": "string",
+                            "default": "",
+                            "description": "Path to the public key to use for encryption and decryption."
+                        },
+                        "privateKeyPath": {
+                            "type": "string",
+                            "default": "",
+                            "description": "Path to private key to use for decryption."
+                        },
+                        "outputFormat": {
+                            "type": "string",
+                            "default": "Block",
+                            "description": "Formatting to use for encrypted value (String or Block)."
+                        },
+                        "outputBlockSize": {
+                            "type": "number",
+                            "default": 74,
+                            "description": "Specified the length of each line when using Block output format."
+                        }       
+                    }
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
