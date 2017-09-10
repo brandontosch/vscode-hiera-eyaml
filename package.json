@@ -2,7 +2,7 @@
     "name": "vscode-hiera-eyaml",
     "displayName": "vscode-hiera-eyaml",
     "description": "Adds support for hiera-eyaml commands.",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "publisher": "BrandonTosch",
     "engines": {
         "vscode": "^1.15.0"
