@@ -59,7 +59,7 @@ export namespace commands {
         }
 
         protected buildExecString(): string {
-            return `${this.currentConfig.eyamlPath} decrypt --stdin --pkcs7-public-key "${this.currentConfig.publicKeyPath}" --pkcs7-private-key "${this.currentConfig.privateKeyPath}"`;
+            return `${this.currentConfig.eyamlPath} decrypt --stdin${this.currentConfig.publicKeyPath ? " --pkcs7-public-key " + this.currentConfig.publicKeyPath : ""}${this.currentConfig.privateKeyPath ? " --pkcs7-private-key " + this.currentConfig.privateKeyPath : ""}`;
         }
 
         protected prepareInput(input: string): string {
@@ -76,7 +76,7 @@ export namespace commands {
         }
 
         protected buildExecString(): string {
-            return `${this.currentConfig.eyamlPath} encrypt -o ${this.currentConfig.outputFormat} --stdin --pkcs7-public-key "${this.currentConfig.publicKeyPath}"`;
+            return `${this.currentConfig.eyamlPath} encrypt -o ${this.currentConfig.outputFormat} --stdin${this.currentConfig.publicKeyPath ? " --pkcs7-public-key " + this.currentConfig.publicKeyPath : ""}`;
         }
 
         public prepareOutput(output: string): string {
